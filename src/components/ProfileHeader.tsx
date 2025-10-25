@@ -1,18 +1,14 @@
 'use client';
 import { FaLinkedin, FaXTwitter, FaGithub, FaPaperclip } from "react-icons/fa6";
 import { useHapticFeedback } from '@/hooks/useHapticFeedback';
+import { socialLinks as defaultSocialLinks, SocialLinks } from '@/data/socialLinks';
 
 interface ProfileHeaderProps {
   name?: string
   age?: string
   title?: string
   profileImage?: string
-  socialLinks?: {
-    twitter?: string
-    resume?: string
-    github?: string
-    linkedin?: string
-  }
+  socialLinks?: SocialLinks
 }
 
 export default function ProfileHeader({
@@ -20,12 +16,7 @@ export default function ProfileHeader({
   age = "21",
   title = "engineer • developer • builder",
   profileImage = "/Aniketpfp.jpeg",
-  socialLinks = {
-    twitter: "https://x.com/",
-    github: "https://github.com/aniket607",
-    linkedin: "https://www.linkedin.com/in/aniket607/",
-    resume: "https://drive.google.com/file/d/1KI6sfuZTvHgRuzqwA3xqTweuOt2Sosxa/view?usp=sharing",
-  }
+  socialLinks = defaultSocialLinks
 }: ProfileHeaderProps) {
   const { triggerHaptic, isMobile } = useHapticFeedback();
 

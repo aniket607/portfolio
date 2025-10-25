@@ -13,6 +13,7 @@ import ContributionsDisplay from './ContributionsDisplay'
 // import OpenSourceContributionsCard from './OpenSourceContributionsCard'
 import TechStackMarquee from './TechStackMarquee'
 import { Reveal } from './Reveal'
+import { socialLinks, GITHUB_USERNAME } from '@/data/socialLinks'
 
 export default function NewHeroSection() {
   return (
@@ -39,12 +40,7 @@ export default function NewHeroSection() {
               age="24"
               title="engineer • developer • builder"
               profileImage="/Aniketpfp.jpeg"
-              socialLinks={{
-                // twitter: "https://x.com/",
-                github: "https://github.com/aniket607",
-                linkedin: "https://www.linkedin.com/in/aniket607/",
-                resume: "https://drive.google.com/file/d/1KI6sfuZTvHgRuzqwA3xqTweuOt2Sosxa/view?usp=sharing",
-              }}
+              socialLinks={socialLinks}
             />
           </Reveal>
           
@@ -127,11 +123,11 @@ export default function NewHeroSection() {
               <Reveal delay={0.1} duration={0.6} amount={0.2}>
                 <div className="sm:px-12 px-6 mt-4">
                 <h2 className="text-lg sm:text-xl opacity-20 leading-relaxed -tracking-[0.01em] mb-4">
-                GitHub Contributions <span className="opacity-20">●</span> @aniket607
+                GitHub Contributions <span className="opacity-20">●</span> @{GITHUB_USERNAME}
                   </h2>
                   <div className="mb-6">
                     <ContributionsDisplay
-                      username="aniket607"
+                      username={GITHUB_USERNAME}
                       variant="compact"
                       className="w-full"
                     />

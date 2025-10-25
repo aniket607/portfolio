@@ -15,6 +15,15 @@ interface ExperienceItem {
 export default function ExperienceContent() {
   const experiences: ExperienceItem[] = [
     {
+      company: "Astra Security",
+      position: "SDE - 1 (Frontend)",
+      duration: "Oct 2025 - Present",
+      description: `Developing and maintaining enterprise-grade cybersecurity platform using modern frontend technologies including NextJS, TanStack Query, and Jotai for state management.
+        Architected performant and scalable UI components with NextJS App Router, implementing advanced data fetching patterns with TanStack Query to reduce load times by 40%.`,
+      href: "https://www.getastra.com/",
+      logoUrl:"/astra-logo.png"
+    },
+    {
       company: "Sage (formerly Fyle)",
       position: "Engineering Intern",
       duration: "March 2025 – Sep 2025",

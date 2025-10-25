@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, ChevronDown, ChevronUp } from 'lucide-react'
 import { fallbackContributions } from '@/lib/github'
+import { GITHUB_USERNAME } from '@/data/socialLinks'
 
 interface Contribution {
   title: string
@@ -28,7 +29,7 @@ export default function OpenSourceContributionsCard() {
       try {
         setLoading(true)
         
-        const response = await fetch('/api/github-contributions?username=aniket607&limit=50')
+        const response = await fetch(`/api/github-contributions?username=${GITHUB_USERNAME}&limit=50`)
         const data = await response.json()
         
         if (data.success && data.contributions.length > 0) {

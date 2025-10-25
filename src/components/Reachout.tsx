@@ -2,29 +2,18 @@
 import { FaLinkedin, FaXTwitter, FaGithub, FaPaperclip } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { useHapticFeedback } from '@/hooks/useHapticFeedback';
+import { socialLinks as defaultSocialLinks, SocialLinks } from '@/data/socialLinks';
 
 interface ReachoutProps {
   title?: string
   subtitle?: string
-  socialLinks?: {
-    twitter?: string
-    resume?: string
-    github?: string
-    linkedin?: string
-    mail?: string
-  }
+  socialLinks?: SocialLinks
 }
 
 export default function Reachout({
   title = "Let's connect",
   subtitle = "Find me on these platforms",
-  socialLinks = {
-    // twitter: "https://x.com/",
-    github: "https://github.com/aniket607",
-    linkedin: "https://www.linkedin.com/in/aniket607/",
-    resume: "https://drive.google.com/file/d/1KI6sfuZTvHgRuzqwA3xqTweuOt2Sosxa/view?usp=sharing",
-    mail: "mailto:aniketgoyal607@gmail.com",
-  }
+  socialLinks = defaultSocialLinks
 }: ReachoutProps) {
   const { triggerHaptic, isMobile } = useHapticFeedback();
 
