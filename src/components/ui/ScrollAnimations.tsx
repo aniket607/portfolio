@@ -2,6 +2,8 @@
 
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { useMusic } from '@/components/MusicContext'
+import { Volume2, VolumeX } from 'lucide-react'
 
 interface ScrollProgressProps {
   className?: string
@@ -20,6 +22,29 @@ export const ScrollProgress = ({ className = '' }: ScrollProgressProps) => {
       className={`fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 transform-gpu z-50 ${className}`}
       style={{ scaleX, transformOrigin: "0%" }}
     />
+  )
+}
+
+export const MusicToggle = () => {
+  const { isMuted, toggleMute } = useMusic()
+
+  return (
+    <motion.button
+      className="fixed bottom-24 right-8 z-50 p-3 bg-black dark:bg-white text-white dark:text-black rounded-full shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+      onClick={toggleMute}
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      aria-label={isMuted ? "Unmute music" : "Mute music"}
+    >
+      {isMuted ? (
+        <VolumeX className="w-5 h-5" />
+      ) : (
+        <Volume2 className="w-5 h-5" />
+      )}
+    </motion.button>
   )
 }
 
@@ -48,7 +73,7 @@ export const ScrollToTop = () => {
 
   return (
     <motion.button
-      className={`fixed bottom-8 right-8 z-50 p-3 bg-black dark:bg-white text-white dark:text-black rounded-full shadow-lg hover:shadow-xl transition-shadow`}
+      className={`fixed bottom-8 right-8 z-50 p-3 bg-black dark:bg-white text-white dark:text-black rounded-full shadow-lg hover:shadow-xl transition-shadow cursor-pointer`}
       onClick={scrollToTop}
       initial={{ opacity: 0, scale: 0 }}
       animate={{ 
