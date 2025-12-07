@@ -13,6 +13,12 @@ export interface SocialLinks {
  * Used across the portfolio for GitHub-related features
  */
 export const GITHUB_USERNAME = "aniket607";
+export const GITHUB_USERNAME_2 = "aniket-astra";
+
+/**
+ * Array of GitHub usernames to display contributions for
+ */
+export const GITHUB_USERNAMES = [GITHUB_USERNAME, GITHUB_USERNAME_2];
 
 /**
  * Main social links configuration

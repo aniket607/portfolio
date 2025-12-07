@@ -13,7 +13,7 @@ import ContributionsDisplay from './ContributionsDisplay'
 // import OpenSourceContributionsCard from './OpenSourceContributionsCard'
 import TechStackMarquee from './TechStackMarquee'
 import { Reveal } from './Reveal'
-import { socialLinks, GITHUB_USERNAME } from '@/data/socialLinks'
+import { socialLinks, GITHUB_USERNAMES } from '@/data/socialLinks'
 
 export default function NewHeroSection() {
   return (
@@ -122,16 +122,28 @@ export default function NewHeroSection() {
               {/* GitHub Contributions */}
               <Reveal delay={0.1} duration={0.6} amount={0.2}>
                 <div className="sm:px-12 px-6 mt-4">
-                <h2 className="text-lg sm:text-xl opacity-20 leading-relaxed -tracking-[0.01em] mb-4">
-                GitHub Contributions <span className="opacity-20">●</span> @{GITHUB_USERNAME}
-                  </h2>
-                  <div className="mb-6">
-                    <ContributionsDisplay
-                      username={GITHUB_USERNAME}
-                      variant="compact"
-                      className="w-full"
-                    />
-                  </div>
+                  {GITHUB_USERNAMES.map((username) => (
+                    <div key={username}>
+                      <h2 className="text-lg sm:text-xl opacity-20 leading-relaxed -tracking-[0.01em] mb-4 mt-6 first:mt-0">
+                        GitHub Contributions <span className="opacity-20">●</span>{' '}
+                        <a
+                          href={`https://github.com/${username}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:opacity-60 transition-opacity cursor-pointer underline decoration-dotted underline-offset-2"
+                        >
+                          @{username}
+                        </a>
+                      </h2>
+                      <div className="mb-6">
+                        <ContributionsDisplay
+                          username={username}
+                          variant="compact"
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </Reveal>
               
