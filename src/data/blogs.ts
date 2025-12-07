@@ -19,10 +19,6 @@ In contrast, a spam filter based on machine learning techniques automatically no
 
 Machine learning is essential for complex problems like speech recognition. You can't just hardcode sound rules for all accents and background noise. The computer needs to figure it out from examples.
 
-Another powerful aspect: machine learning can reveal insights humans might miss. When you train a spam filter, you can analyze which words actually matter most. Sometimes you discover unexpected patterns, like a data detective uncovering hidden clues.
-
-## Learning from Models
-
 You can also inspect ML models to see what they've learned. Take that spam filter again. Once it's trained, you can peek inside and see which words it thinks are the strongest spam indicators. Sometimes you'll discover unexpected patterns or correlations you never noticed before. This process of digging through data to find hidden insights is called data mining, and machine learning is great at it.
 
 ## The ML Toolbox
