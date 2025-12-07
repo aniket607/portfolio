@@ -2,57 +2,41 @@ import { BlogPost } from '@/types/blog'
 
 export const blogs: BlogPost[] = [
   {
-    id: 'ssh-server-guide',
-    title: 'How to SSH Into Your Server (The Right Way) A Beginner-Friendly Guide with Pro Tips',
-    description: 'A comprehensive guide on securely connecting to remote servers using SSH, tailored for beginners with professional tips and best practices.',
-    content: `# How to SSH Into Your Server (The Right Way) A Beginner-Friendly Guide with Pro Tips
+    id: 'what-is-machine-learning',
+    title: 'What is Machine Learning?',
+    description: 'My quick learnings about machine learning in a nutshell.',
+    content: `## What is Machine Learning?
 
-SSH (Secure Shell) is an essential tool for developers and system administrators. This guide will walk you through the proper way to connect to your server securely.
+Machine learning is about teaching computers to learn from data, rather than writing endless if-then-else code. Spam filters are the classic example. They analyze lots of spam and normal emails, learn what's suspicious, and automatically block problematic messages. The key insight: just dumping data doesn't help. The model has to actually learn from it.
 
-## What is SSH?
+## The Old Way vs The New Way
 
-SSH is a cryptographic network protocol that allows secure communication between two computers over an unsecured network. It's commonly used for:
+Old school spam filters worked by spotting spammy words like "free" or "4U" and hardcoding rules. But then spammers got creative. They'd write "For U" instead of "4U", and suddenly your code breaks or needs constant maintenance.
 
-- Remote server access
-- Secure file transfers
-- Command execution on remote machines
+In contrast, a spam filter based on machine learning techniques automatically notices that "For U" has become unusually frequent in spam flagged by users, and it starts flagging them without your intervention. Machine learning filters adapt by learning new patterns automatically, without manual intervention.
 
-## Basic SSH Connection
+## Real World Applications
 
-The most basic SSH connection command is:
+Machine learning is essential for complex problems like speech recognition. You can't just hardcode sound rules for all accents and background noise. The computer needs to figure it out from examples.
 
-\`\`\`bash
-ssh username@server-ip-address
-\`\`\`
+Another powerful aspect: machine learning can reveal insights humans might miss. When you train a spam filter, you can analyze which words actually matter most. Sometimes you discover unexpected patterns, like a data detective uncovering hidden clues.
 
-## Key-Based Authentication
+## Learning from Models
 
-For enhanced security, use SSH keys instead of passwords:
+You can also inspect ML models to see what they've learned. Take that spam filter again. Once it's trained, you can peek inside and see which words it thinks are the strongest spam indicators. Sometimes you'll discover unexpected patterns or correlations you never noticed before. This process of digging through data to find hidden insights is called data mining, and machine learning is great at it.
 
-1. Generate an SSH key pair:
-\`\`\`bash
-ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
-\`\`\`
+## The ML Toolbox
 
-2. Copy your public key to the server:
-\`\`\`bash
-ssh-copy-id username@server-ip-address
-\`\`\`
+Machine learning handles an incredible range of tasks: detecting tumors in medical imaging, classifying products on production lines, recommending your next show, or spotting credit card fraud. The methods are diverse too: neural networks, transformers, random forests. It's a comprehensive toolbox for solving data-driven problems.
 
-## Pro Tips
+## The Big Picture
 
-- Always use key-based authentication
-- Disable password authentication on production servers
-- Use non-standard SSH ports
-- Implement fail2ban for additional security
-- Regularly update your SSH client and server
+It feels like the evolution from manually tweaking CSS hacks to using a framework that just works and adapts automatically.
 
-## Conclusion
-
-SSH is a powerful tool that, when used correctly, provides secure and efficient remote access to your servers. Following these best practices will help keep your connections secure and your servers protected.`,
-    date: '2025-10-19',
+`,
+    date: '2025-12-07',
     author: 'Aniket Goyal',
-    tags: ['SSH', 'DevOps', 'Security', 'Server Management', 'Linux'],
+    tags: ['AI', 'Machine Learning', 'Data Science', 'Python', 'TensorFlow', 'Keras'],
     readTime: '3 min read',
   }
 ]
