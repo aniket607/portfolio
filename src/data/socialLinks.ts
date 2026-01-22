@@ -27,7 +27,7 @@ export const socialLinks: SocialLinks = {
   // twitter: "https://x.com/", 
   github: "https://github.com/aniket607",
   linkedin: "https://www.linkedin.com/in/aniket607/",
-  resume: "https://drive.google.com/file/d/1L-GuNSP_PmeJAB4DFibxKU740NscPq3K/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1BUsuVfnvPB8v70St396cMG3p9JEGgTEY/",
   mail: "mailto:aniketgoyal607@gmail.com",
 };
 
