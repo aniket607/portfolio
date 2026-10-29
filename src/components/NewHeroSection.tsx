@@ -40,7 +40,7 @@ export default function NewHeroSection() {
           <Reveal delay={0.2} duration={0.7} amount={0.3}>
             <ProfileHeader 
               name="Aniket Goyal"
-              age="24"
+              birthDate="2001-07-06"
               title="engineer • developer • builder"
               profileImage="/Aniketpfp.jpeg"
               socialLinks={socialLinks}

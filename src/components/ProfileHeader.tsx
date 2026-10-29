@@ -3,9 +3,17 @@ import { FaLinkedin, FaXTwitter, FaGithub, FaPaperclip } from "react-icons/fa6";
 import { useHapticFeedback } from '@/hooks/useHapticFeedback';
 import { socialLinks as defaultSocialLinks, SocialLinks } from '@/data/socialLinks';
 
+function getAge(birthDate: string): number {
+  const [y, m, d] = birthDate.split('-').map(Number);
+  const today = new Date();
+  let age = today.getFullYear() - y;
+  if (today.getMonth() + 1 < m || (today.getMonth() + 1 === m && today.getDate() < d)) age--;
+  return age;
+}
+
 interface ProfileHeaderProps {
   name?: string
-  age?: string
+  birthDate?: string // YYYY-MM-DD
   title?: string
   profileImage?: string
   socialLinks?: SocialLinks
@@ -13,7 +21,7 @@ interface ProfileHeaderProps {
 
 export default function ProfileHeader({
   name = "Aniket Goyal",
-  age = "21",
+  birthDate = "2001-07-06",
   title = "engineer • developer • builder",
   profileImage = "/Aniketpfp.jpeg",
   socialLinks = defaultSocialLinks
@@ -39,8 +47,8 @@ export default function ProfileHeader({
           <h1 className="font-[family-name:var(--font-instrument-serif)] text-3xl sm:text-4xl tracking-[0.01em] font-medium mb-0">
             {name}
           </h1>
-          <p className="opacity-40 text-[14px]">
-            {age} • {title}
+          <p className="opacity-40 text-[14px]" suppressHydrationWarning>
+            {getAge(birthDate)} • {title}
           </p>
         </div>
         <div className="flex justify-start space-x-4 mt-3 sm:mt-0">
