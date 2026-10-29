@@ -2,6 +2,33 @@ import { Project } from '@/types/project'
 
 export const projects: Project[] = [
   {
+    id: 'mrg-real-estate',
+    title: "MRG Real Estate",
+    description: "Bilingual English/Arabic property platform for a Dubai off-plan brokerage.",
+    liveLink: "https://www.mrgrealestate.ae",
+    image: '/images/mrg/home.webp',
+    tags: ["TanStack Start", "React", "Tailwind CSS", "shadcn/ui", "Neon PostgreSQL", "Drizzle ORM", "Better Auth"],
+  },
+  {
+    id: 'blogflow',
+    title: "BlogFlow",
+    description: "AI blog writer that plans topics on a calendar, drafts SEO-optimised articles and publishes them for you.",
+    longDescription: "A SaaS product that takes a blog from topic idea to published article with very little manual work.\n\n- Content calendar: drag topic ideas onto a date to schedule them.\n- AI drafting: SEO-focused articles written for your niche with Gemini.\n- Auto-publishing: posts go out to WordPress, Medium or the built-in blog on schedule.\n- Subscription billing through Dodo Payments.",
+    liveLink: "https://blogflow.aniketgoyal.tech/",
+    image: '/images/blogflow.webp',
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma ORM",
+      "NextAuth",
+      "Gemini",
+      "Resend",
+      "Dodo Payments"
+    ],
+  },
+  {
     id: 'nightlife-app',
     title: "Nightlife App",
     description: "Full-stack platform to discover nightlife events and club experiences with real-time registrations.",
@@ -21,28 +48,6 @@ export const projects: Project[] = [
       "Prisma ORM"
     ],
   },
-  {
-    id:'chat-w-pdf',
-    title: "Chat with PDF",
-    description: "A simple RAG based chatapp that allows you to chat with your PDF files.",
-    longDescription: "Built a simple RAG based chatapp that allows you to chat with your PDF files.\n\nUsed the google gemini embedding model to embed the pdf files and then used the pinecone vector database to store the embeddings.\n\nUsed the google gemini api to chat with the pdf files.",
-    liveLink: "https://chatwithpdf.aniketgoyal.tech/",
-    githubLink: "https://github.com/aniket607/chat-pdf",
-    // video: '',
-    image: '/images/chat-pdf.png',
-    // tweetUrl: "https://x.com/",
-    tags: [
-      "Next.js",
-      "Tailwind CSS",
-      "Gemini",
-      "Pinecone",
-      "TypeScript",
-      "shadcn/ui",
-      "AI SDK",
-      "LlamaParse",
-      "Vercel Blob"
-    ],
-  }
 ];
 
 export const getProjectById = (id: string): Project | undefined => {

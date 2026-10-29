@@ -20,8 +20,8 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: 'Aniket Goyal',
-  description: 'I build products that solve real problems. Available for new opportunities.',
+  title: 'Aniket Goyal | Full-stack Developer for Websites and Web Apps',
+  description: 'Full-stack developer building fast, product-grade websites and web apps for businesses, including bilingual property platforms for Dubai real estate.',
   openGraph: {
     url: 'https://aniketgoyal.tech/',
     siteName: 'Aniket Goyal Portfolio',

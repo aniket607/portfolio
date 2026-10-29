@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import DiagonalPattern from './DiagonalPattern'
 import BannerSection from './BannerSection'
 import ProfileHeader from './ProfileHeader'
@@ -9,6 +10,8 @@ import SectionBorder from './SectionBorder'
 import ExperienceContent from './ExperienceContent'
 import Reachout from './Reachout'
 import CallToAction from './CallToAction'
+import RealEstateContact from './RealEstateContact'
+import FeaturedWork from './FeaturedWork'
 import ContributionsDisplay from './ContributionsDisplay'
 // import OpenSourceContributionsCard from './OpenSourceContributionsCard'
 import TechStackMarquee from './TechStackMarquee'
@@ -50,8 +53,8 @@ export default function NewHeroSection() {
               {/* Current Role Section */}
               <Reveal delay={0.1} duration={0.6} amount={0.4}>
                 <ContentSection
-                  subtitle="AI Engineer | Full-stack Developer"
-                  title=''
+                  subtitle="Full-stack Developer | Available for contract projects"
+                  title="I build fast, polished websites and web apps for businesses."
                   className="mt-6"
                 >
                   <div></div>
@@ -66,7 +69,10 @@ export default function NewHeroSection() {
               <Reveal delay={0.1} duration={0.6} amount={0.3}>
                 <ContentSection className="pb-8 pt-6">
                   <ContentParagraph className="mt-6 mb-6">
-                    <span className="font-medium dark:text-white text-black">I&apos;m not your average developer.</span> I&apos;d rather be crafting elegant code with a coffee in hand than debugging someone else&apos;s spaghetti code at 3 AM. These days, you&apos;ll find me deep in AI model integrations, building intelligent features that actually make sense.
+                    <span className="font-medium dark:text-white text-black">I build products that bring in customers.</span> Marketing sites, web apps, dashboards and AI-powered features, designed and built end to end: fast on mobile, easy to find on Google, and simple for your team to manage.
+                  </ContentParagraph>
+                  <ContentParagraph className="mb-6">
+                    <span className="font-medium dark:text-white text-black">Recent specialty: Dubai real estate.</span> I built a bilingual English/Arabic property platform with search, gated brochures, instant lead alerts and an admin panel the team runs without a developer. <Link href="/projects/mrg-real-estate" className="underline decoration-dotted underline-offset-4">Read the case study</Link>.
                   </ContentParagraph>
                   <ContentParagraph className="mb-2">
                     <span className="font-medium dark:text-white text-black">I build from zero.</span> Whether it&apos;s frontend, backend, full-stack applications, or AI-powered experiences, I work across the entire development lifecycle. From UI/UX to deployment to user feedback, I care less about technology debates and more about delivering results that people love using.
@@ -76,6 +82,15 @@ export default function NewHeroSection() {
 
               <Reveal delay={0.05} duration={0.4} y={15} amount={0.8}>
                 <SectionBorder className="mt-6" />
+              </Reveal>
+
+               {/* Featured Work */}
+              <Reveal delay={0.1} duration={0.6} amount={0.2}>
+                <FeaturedWork />
+              </Reveal>
+
+              <Reveal delay={0.05} duration={0.4} y={15} amount={0.8}>
+                <SectionBorder className="mt-0 pt-0" />
               </Reveal>
 
                {/* Experience Section */}
@@ -96,17 +111,31 @@ export default function NewHeroSection() {
                   <h2 className="text-lg sm:text-xl mb-4 opacity-20 mt-8">Technical Contributions</h2>
                   <div className="space-y-6 dark:text-white/70 text-black/70 pb-8">
                     <ContentParagraph>
-                      <span className="font-medium dark:text-white text-black">at Sage (formerly Fyle) —</span> I focused on shipping user-facing improvements that reduced friction and made the product faster.
+                      <span className="font-medium dark:text-white text-black">at Astra Security —</span> I own frontend delivery for an enterprise security dashboard, shipping 262 issues, 83% of them High or Urgent priority.
                     </ContentParagraph>
                     <ul className="list-disc pl-6 space-y-2 text-sm sm:text-md dark:text-white/70 text-black/70">
                       <li>
-                        <span className="font-medium dark:text-white text-black">Modernized frontend:</span> Migrated two major pages and multiple reusable components from AngularJS to modern Angular with full feature parity, preserving UX and accessibility while simplifying the codebase.
+                        <span className="font-medium dark:text-white text-black">Faster product:</span> Cut dashboard load time by 40%, bundle size by 10% and staging deployment time by 70%.
                       </li>
                       <li>
-                        <span className="font-medium dark:text-white text-black">Reduced platform load:</span> Refactored legacy API integrations to the new Platform APIs across Outlook Add-in, Chrome Extension, Mobile, and Web. Result: ~70% fewer API calls and noticeably faster interactions.
+                        <span className="font-medium dark:text-white text-black">End-to-end features:</span> Delivered enterprise activity logging and label management, from design handoff to production.
                       </li>
                       <li>
-                        <span className="font-medium dark:text-white text-black">Shipped with velocity:</span> Partnered with Product and Design to resolve user-facing bugs quickly and deliver new features without regressions, keeping the experience smooth end-to-end.
+                        <span className="font-medium dark:text-white text-black">Quality and breadth:</span> Resolved 64 bugs and shipped 74 improvements across authentication, scans, integrations and scheduling.
+                      </li>
+                      <li>
+                        <span className="font-medium dark:text-white text-black">Smarter workflows:</span> Built 17 AI-assisted workflows for scan setup, verification, credentials and scenario analysis.
+                      </li>
+                    </ul>
+                    <ContentParagraph>
+                      <span className="font-medium dark:text-white text-black">at Sage (formerly Fyle) —</span> I shipped user-facing improvements that reduced friction and made the product faster.
+                    </ContentParagraph>
+                    <ul className="list-disc pl-6 space-y-2 text-sm sm:text-md dark:text-white/70 text-black/70">
+                      <li>
+                        <span className="font-medium dark:text-white text-black">Modernized frontend:</span> Migrated two major pages and multiple reusable components from AngularJS to modern Angular with full feature parity.
+                      </li>
+                      <li>
+                        <span className="font-medium dark:text-white text-black">Reduced platform load:</span> Moved legacy API integrations to the new Platform APIs across Outlook Add-in, Chrome Extension, Mobile and Web, for ~70% fewer API calls.
                       </li>
                     </ul>
                   </div>
@@ -174,6 +203,15 @@ export default function NewHeroSection() {
               
               <Reveal delay={0.05} duration={0.4} y={15} amount={0.8}>
                 <SectionBorder className="mt-4 pt-0" />
+              </Reveal>
+
+              {/* Dubai real estate contact */}
+              <Reveal delay={0.1} duration={0.6} amount={0.4}>
+                <RealEstateContact className="sm:px-12 px-6 mt-6 pb-8" />
+              </Reveal>
+
+              <Reveal delay={0.05} duration={0.4} y={15} amount={0.8}>
+                <SectionBorder className="mt-0 pt-0" />
               </Reveal>
 
               {/* call to action*/}

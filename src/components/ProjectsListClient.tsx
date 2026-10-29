@@ -19,7 +19,7 @@ export default function ProjectsListClient({ projects }: ProjectsListClientProps
           
           {/* Page Header */}
           <div className="w-full relative bg-neutral-50/30 dark:bg-neutral-900/30 border-b border-neutral-200 dark:border-neutral-700 pt-20 sm:pt-24">
-            <div className="px-6 sm:px-8 md:px-16 lg:px-20 py-12 sm:py-16 md:py-20">
+            <div className="px-6 sm:px-8 md:px-16 lg:px-20 py-10 sm:py-12 md:py-14">
               <div className="max-w-6xl mx-auto">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -34,16 +34,13 @@ export default function ProjectsListClient({ projects }: ProjectsListClientProps
                   transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
                 >
                   <p className="text-neutral-600 dark:text-neutral-400 text-lg sm:text-xl md:text-2xl text-center max-w-3xl mx-auto leading-relaxed">
-                    A showcase of my work and side projects.
+                    Selected client work and products I have built.
                   </p>
                 </motion.div>
               </div>
             </div>
           </div>
           
-           {/* Section Transition */}
-           <div className="w-full h-8 sm:h-12 lg:h-16 bg-gradient-to-b from-neutral-50/30 dark:from-neutral-900/30 to-neutral-100 dark:to-[#161616]"></div>
-
           {/* Masonry Grid */}
           <div className="relative">
             <MasonryGrid projects={projects} />

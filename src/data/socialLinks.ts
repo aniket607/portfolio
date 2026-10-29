@@ -6,6 +6,7 @@ export interface SocialLinks {
   linkedin?: string;
   resume?: string;
   mail?: string;
+  whatsapp?: string;
 }
 
 /**
@@ -29,6 +30,7 @@ export const socialLinks: SocialLinks = {
   linkedin: "https://www.linkedin.com/in/aniket607/",
   resume: "https://drive.google.com/file/d/1BUsuVfnvPB8v70St396cMG3p9JEGgTEY/",
   mail: "mailto:aniketgoyal607@gmail.com",
+  whatsapp: "https://wa.me/917974767742?text=Hi%20Aniket%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project.",
 };
 
 /**

@@ -1,5 +1,5 @@
 'use client'
-import { FaLinkedin, FaXTwitter, FaGithub, FaPaperclip } from "react-icons/fa6";
+import { FaLinkedin, FaXTwitter, FaGithub, FaPaperclip, FaWhatsapp } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { useHapticFeedback } from '@/hooks/useHapticFeedback';
 import { socialLinks as defaultSocialLinks, SocialLinks } from '@/data/socialLinks';
@@ -92,6 +92,21 @@ export default function Reachout({
               <IoMdMail size={20} className="sm:size-[18px] group-hover:scale-110 transition-transform duration-200 flex-shrink-0 text-gray-700 dark:text-gray-200 sm:text-gray-600 sm:dark:text-gray-300" />
               <span className="hidden sm:inline text-sm font-medium dark:text-white/80 text-black/80 group-hover:text-[#006FEE] transition-colors duration-200">
                 Mail
+              </span>
+            </a>
+          )}
+
+          {socialLinks.whatsapp && (
+            <a 
+              className="flex items-center justify-center sm:justify-start space-x-0 sm:space-x-3 hover:opacity-80 transition-all duration-200 group p-3 sm:px-3 sm:py-3 lg:p-0 rounded-full sm:rounded-lg bg-gray-100/80 dark:bg-[hsl(0,3%,6.5%)] sm:bg-gray-50/50 sm:dark:bg-gray-800/30 lg:bg-transparent lg:dark:bg-transparent border border-gray-200/60 dark:border-gray-700/60 sm:border-gray-200/50 sm:dark:border-gray-700/50 lg:border-none hover:bg-gray-200/80 dark:hover:bg-gray-700/70 sm:hover:bg-gray-100/50 sm:dark:hover:bg-gray-700/40 lg:hover:bg-transparent lg:dark:hover:bg-transparent" 
+              href={socialLinks.whatsapp} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={handleLinkClick}
+            >
+              <FaWhatsapp size={20} className="sm:size-[18px] group-hover:scale-110 transition-transform duration-200 flex-shrink-0 text-gray-700 dark:text-gray-200 sm:text-gray-600 sm:dark:text-gray-300" />
+              <span className="hidden sm:inline text-sm font-medium dark:text-white/80 text-black/80 group-hover:text-[#006FEE] transition-colors duration-200">
+                WhatsApp
               </span>
             </a>
           )}
