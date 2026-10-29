@@ -114,14 +114,6 @@ function List({ items }: { items: string[] }) {
   )
 }
 
-function Placeholder({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="rounded-lg border border-dashed border-neutral-400 dark:border-neutral-600 px-4 py-3 text-sm opacity-60">
-      {children}
-    </p>
-  )
-}
-
 function Shot({
   src,
   alt,
@@ -211,7 +203,13 @@ export default function MrgCaseStudyPage() {
 
           {/* 2. Brief */}
           <Section title="The brief">
-            <Placeholder>[CLIENT BRIEF: confirm with Aniket]</Placeholder>
+            <p className="text-sm sm:text-base dark:text-white/70 text-black/70 leading-relaxed">
+              MRG Real Estate is a Dubai brokerage selling off-plan and new-build
+              property. They needed a premium website to showcase hundreds of
+              projects in English and Arabic, turn visitors into enquiries, and
+              let their own team publish and update listings without relying on
+              a developer.
+            </p>
           </Section>
 
           {/* 3. What I built */}
